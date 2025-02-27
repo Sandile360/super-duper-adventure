@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import driverFacrory.DriverFactory;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -45,8 +46,8 @@ public class LoginStepDefinition {
 
     }
 
-//    @After
-//    public void tearDown(){
-//        driver.quit();
-//    }
+    @After
+    public void tearDown(){
+        driver.quit();
+    }
 }
