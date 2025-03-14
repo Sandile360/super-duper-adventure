@@ -42,7 +42,7 @@ public class LoginStepDefinition {
         loginPage.positiveLogin(email,password);
     }
 
-    @Then("logout")
+    @And("click logout")
     public void logout() {
         homePage.performLogout();
     }
@@ -50,13 +50,11 @@ public class LoginStepDefinition {
     @When("^admin user input valid (.+) (.+) and confirm$")
     public void adminUserInputValidUserEmailPasswordAndConfirm(String email, String password ) {
         loginPage.positiveLogin(email,password);
-//        loginPage.performLogout();
     }
 
     @Then("^perform login with invalid (.+) (.+)$")
     public void performLoginWithInvalidInvalidEmailInvalidPassword(String email, String password) {
         loginPage.negativeLogin(email,password);
-//        hooks.tearDown();
     }
 
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class HomePage {
     WebDriver driver;
     By btn_logout = By.xpath("//a[@class='nav-link text-primary-emphasis']");
-    By btn_delete = By.xpath("/html/body/section[1]/table/tbody/tr/td[7]/a");
+    By btn_delete = By.xpath("/html[1]/body[1]/section[1]/table[1]/tbody[1]/tr[1]/td[7]/a[1]");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;

@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="48.236" tests="2" skipped="0" failures="1" errors="0">
-<testcase classname="perform positive and negative login" name="mock login credentials - #1.1" time="47.425">
-<system-out><![CDATA[
-Given user on login page....................................................passed
-When user input valid kimjade@mail.com 369121 and confirm...................passed
-Then logout.................................................................passed
-When admin user input valid brucelee@mail.com 159753 and confirm............passed
-Then perform login with invalid steve@mail.com 132546846....................passed
-]]></system-out>
-</testcase>
-<testcase classname="Delete user from Task Management Dashboard" name="verify successful delete operation from user and admin - #1.1" time="0.32">
-<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null">
-<![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
-	at pages.HomePage.setBtn_delete(HomePage.java:15)
-	at stepDefinition.DeleteStepDefinition.userDeleteATask(DeleteStepDefinition.java:16)
-	at ✽.user delete a task(file:///home/sandile/Desktop/github/super-duper-adventure/src/test/java/features/TC2-delete_user.feature:5)
+<testsuite name="Cucumber" time="23.543" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="perform positive and negative login" name="mock login credentials - #1.1" time="22.519">
+<failure type="java.lang.NullPointerException" message="Cannot invoke &quot;pages.HomePage.performLogout()&quot; because &quot;this.homePage&quot; is null">
+<![CDATA[java.lang.NullPointerException: Cannot invoke "pages.HomePage.performLogout()" because "this.homePage" is null
+	at stepDefinition.LoginStepDefinition.logout(LoginStepDefinition.java:47)
+	at ✽.click logout(file:///home/sandile/Desktop/github/super-duper-adventure/src/test/java/features/TC1-login.feature:5)
 ]]>
 </failure>
 <system-out><![CDATA[
 Given user on login page....................................................passed
 When user input valid kimjade@mail.com 369121 and confirm...................passed
-And user delete a task......................................................failed
+And click logout............................................................failed
+When admin user input valid brucelee@mail.com 159753 and confirm............skipped
+And click logout............................................................skipped
+Then perform login with invalid steve@mail.com 132546846....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Delete user from Task Management Dashboard" name="verify successful delete operation from user and admin - #1.1" time="0.404">
+<system-out><![CDATA[
+Given user on login page....................................................passed
+When user input valid kimjade@mail.com 369121 and confirm...................passed
 ]]></system-out>
 </testcase>
 </testsuite>
