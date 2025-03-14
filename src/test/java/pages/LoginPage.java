@@ -12,7 +12,6 @@ public class LoginPage {
     By userPassword = By.name("password");
     By btn_login = By.name("login_user");
 
-    By btn_logout = By.xpath("//a[@class='nav-link text-primary-emphasis']");
 
 //    warning locators
     By error_email = By.xpath("//div[contains(text(),'Email is required.')]");
@@ -29,11 +28,6 @@ public class LoginPage {
         driver.findElement(userEmail).sendKeys(email);
         driver.findElement(userPassword).sendKeys(password);
         driver.findElement(btn_login).click();
-    }
-
-    public void performLogout(){
-        driver.findElement(btn_logout).click();
-
     }
 
     public void negativeLogin(String email, String password){
