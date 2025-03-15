@@ -12,6 +12,8 @@ import org.junit.runner.RunWith;
         monochrome = true,
         plugin = {"html:/home/sandile/Desktop/github/super-duper-adventure/src/test/java/reports/cucumber-reports.html","junit:/home/sandile/Desktop/github/super-duper-adventure/src/test/java/reports/cucumber-reports.junit"}
 )
+
 public class RunTests {
+
 
 }

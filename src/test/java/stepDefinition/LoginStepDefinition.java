@@ -26,9 +26,9 @@ public class LoginStepDefinition {
     }
 
 //    @After
-    public void tearHooks(){
-        hooks.tearDown();
-    }
+//    public void tearHooks(){
+//        hooks.tearDown();
+//    }
 
     @Given("user on login page")
     public void userOnLoginPage() {
@@ -44,6 +44,7 @@ public class LoginStepDefinition {
 
     @And("click logout")
     public void logout() {
+        homePage = new HomePage(driver);
         homePage.performLogout();
     }
 

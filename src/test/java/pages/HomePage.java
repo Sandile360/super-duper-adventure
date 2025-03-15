@@ -3,10 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
 public class HomePage {
     WebDriver driver;
-    By btn_logout = By.xpath("//a[@class='nav-link text-primary-emphasis']");
-    By btn_delete = By.xpath("/html[1]/body[1]/section[1]/table[1]/tbody[1]/tr[1]/td[7]/a[1]");
+    By btn_logout = By.xpath("//a[contains(text(),'Log Out')]");
+    By btn_delete = By.xpath("//a[@class='btn btn-danger']");
+
+//    By btn_delete = By.xpath("//td[6]/a[@class='btn btn-danger']");;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
